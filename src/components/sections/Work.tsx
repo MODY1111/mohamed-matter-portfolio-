@@ -1,12 +1,23 @@
 import { works } from "@/data/works";
+import { profile } from "@/data/profile";
 import Image from "next/image";
 
 export function Work() {
     return (
         <div id="work" className="section-work flat-spacing">
-            <div className="sect-tag text-caption fw-medium">
-                <i className="icon icon-high-light" />
-                Work Highlights
+            <div className="sect-tag text-caption fw-medium" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <i className="icon icon-high-light" />
+                    Work Highlights
+                </span>
+                <a
+                    href={profile.behance}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-body-3 link text-black-72"
+                >
+                    See all projects on Behance →
+                </a>
             </div>
             <div className="work-list element-sticky">
                 {works.map((w, i) => (

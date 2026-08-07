@@ -25,6 +25,51 @@ export function useIsakAnimations() {
         if (hasRun.current) return;
         hasRun.current = true;
 
+        const prefersReducedMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        if (prefersReducedMotion) {
+            // Skip all scroll-linked/decorative animation and make sure every
+            // element GSAP would otherwise reveal over time is visible immediately.
+            document
+                .querySelectorAll<HTMLElement>(
+                    ".split-text, .scrolling-effect, .effectFade, .intro-title span",
+                )
+                .forEach((el) => {
+                    el.style.opacity = "1";
+                    el.style.transform = "none";
+                    el.style.filter = "none";
+                    el.classList.add("active", "is-visible");
+                });
+            document
+                .querySelectorAll<HTMLElement>(".prg-line")
+                .forEach((el) => (el.style.height = "100%"));
+            document
+                .querySelectorAll<HTMLElement>(".progress-line")
+                .forEach((el) => {
+                    el.style.width = (el.dataset.progress || "0") + "%";
+                });
+            document.querySelectorAll<HTMLElement>(".number").forEach((el) => {
+                el.textContent = el.dataset.to || el.textContent;
+            });
+            document
+                .querySelectorAll<HTMLElement>(".text-rotate .text")
+                .forEach((circularText) => {
+                    const text = "award winning designer - since 2020 -";
+                    const chars = text.split("");
+                    const degree = 360 / chars.length;
+                    circularText.innerHTML = "";
+                    chars.forEach((char, i) => {
+                        const span = document.createElement("span");
+                        span.textContent = char;
+                        span.style.transform = `rotate(${i * degree}deg)`;
+                        circularText.appendChild(span);
+                    });
+                });
+            return;
+        }
+
         ensurePlugins();
 
         const cleanups: Array<() => void> = [];
@@ -544,6 +589,29 @@ export function useIsakAnimations() {
                 document.removeEventListener("scroll", onScrollLink),
             );
         }
+
+        /* ---------------- Instantly reveal target section on nav-link jump ----------------
+         * Clicking a sidebar/menu link teleports the user straight to that section
+         * instead of scrolling past it gradually, so every reveal animation inside
+         * it would otherwise start its ~1s fade-in from zero at the same moment —
+         * looking like a blank/black section for up to a second. Skip straight to
+         * the end state for anything inside the destination section.
+         */
+        const onNavJump = (e: Event) => {
+            const href = (e.currentTarget as HTMLAnchorElement).getAttribute("href");
+            if (!href || !href.startsWith("#")) return;
+            if (!document.querySelector(href)) return;
+            // The fast jump flies through every section between here and the
+            // destination too quickly for their reveals to trigger naturally,
+            // so complete all of them rather than just the target section's.
+            ScrollTrigger.getAll().forEach((st) => {
+                st.animation?.progress(1);
+            });
+        };
+        scrollLinks.forEach((a) => a.addEventListener("click", onNavJump));
+        cleanups.push(() =>
+            scrollLinks.forEach((a) => a.removeEventListener("click", onNavJump)),
+        );
 
         /* ---------------- Hover cursor img ---------------- */
         const hoverEls =
