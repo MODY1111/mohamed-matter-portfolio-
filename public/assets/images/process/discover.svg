@@ -1,0 +1,19 @@
+<svg width="340" height="206" viewBox="0 0 340 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0066FF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#0066FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="340" height="206" fill="url(#glow)"/>
+  <circle cx="150" cy="95" r="46" stroke="#0066FF" stroke-width="6"/>
+  <line x1="183" y1="128" x2="228" y2="173" stroke="#0066FF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="134" cy="80" r="5" fill="#0066FF"/>
+  <circle cx="162" cy="72" r="5" fill="#0066FF"/>
+  <circle cx="170" cy="102" r="5" fill="#0066FF"/>
+  <circle cx="140" cy="112" r="5" fill="#0066FF"/>
+  <line x1="134" y1="80" x2="162" y2="72" stroke="#0066FF" stroke-width="2" opacity="0.5"/>
+  <line x1="162" y1="72" x2="170" y2="102" stroke="#0066FF" stroke-width="2" opacity="0.5"/>
+  <line x1="170" y1="102" x2="140" y2="112" stroke="#0066FF" stroke-width="2" opacity="0.5"/>
+  <line x1="140" y1="112" x2="134" y2="80" stroke="#0066FF" stroke-width="2" opacity="0.5"/>
+</svg>
