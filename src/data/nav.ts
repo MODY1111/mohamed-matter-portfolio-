@@ -13,6 +13,6 @@ export const navItems: NavItem[] = [
   { href: "#work", label: "Work", icon: "icon-high-light" },
   { href: "#service", label: "Services", icon: "icon-service" },
   { href: "#tech", label: "Tech", icon: "icon-tech-stack" },
-  { href: "#testimonial", label: "Testimonials", icon: "icon-tes", separator: "after" },
+  { href: "#testimonial", label: "Trusted By", icon: "icon-tes", separator: "after" },
   { href: "#contact", label: "Contact", icon: "icon-send" },
 ];

@@ -892,6 +892,22 @@
         max-width: 420px;
     }
 
+    .org-tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 32px;
+        list-style: none;
+        padding: 0;
+
+        .org-tag {
+            padding: 14px 24px;
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            border-radius: 999px;
+        }
+    }
+
     .s-title {
         margin-bottom: 32px;
     }
