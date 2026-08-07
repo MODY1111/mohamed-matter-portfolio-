@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { navItems } from "@/data/nav";
 
@@ -9,6 +10,9 @@ type DesktopSidebarProps = {
 
 export function DesktopSidebar({ positionClass = "pst-v1" }: DesktopSidebarProps = {}) {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   const handleToggle = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -22,7 +26,7 @@ export function DesktopSidebar({ positionClass = "pst-v1" }: DesktopSidebarProps
   return (
     <div className={`sidebar-tools ${positionClass}`}>
       <div className="nav-top">
-        <div className={`tf-btn-icon toggle-switch-mode${theme === "dark" ? " active" : ""}`} onClick={handleToggle}>
+        <div className={`tf-btn-icon toggle-switch-mode${mounted && theme === "dark" ? " active" : ""}`} onClick={handleToggle}>
           <i className="icon icon-light" />
         </div>
       </div>

@@ -6,8 +6,8 @@ export function Intro() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         loading="lazy"
-                        width={23}
-                        height={31}
+                        width={48}
+                        height={48}
                         src="/assets/images/avatar/avatar-boy.png"
                         alt="avatar"
                     />

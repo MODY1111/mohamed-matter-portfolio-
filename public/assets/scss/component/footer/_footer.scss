@@ -83,5 +83,13 @@
             margin-top: 40px;
             margin-bottom: 40px;
         }
+
+        .foot-bottom {
+            flex-wrap: wrap;
+
+            .isak {
+                max-width: 160px;
+            }
+        }
     }
 }

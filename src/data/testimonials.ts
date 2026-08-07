@@ -5,25 +5,25 @@ export type Testimonial = {
   image: string;
 };
 
-// PLACEHOLDER — replace with real client quotes. These are template sample
-// testimonials, not actual feedback from Mohamed's clients.
+// PLACEHOLDER — replace with real client quotes. These are illustrative
+// sample testimonials, not actual feedback from Mohamed's clients.
 export const testimonials: Testimonial[] = [
   {
-    text: "Working with him was seamless. The interface came out fast, modern, and easy to update—exactly what our team needed.",
+    text: "Mohamed owned the entire design process for our platform—from early research to a design system our developers could actually build from. The handoff was clean and nothing got lost in translation.",
     authorName: "Sample Client 1",
-    authorRole: "Head of Product",
-    image: "/assets/images/section/tes-1.svg",
+    authorRole: "Product Manager, Government Platform",
+    image: "/assets/images/section/tes-1.jpg",
   },
   {
-    text: "He shaped our vision into a strong product. The process was clear, fast, and the result gave our team the professional edge we needed.",
+    text: "We needed a dashboard that made sense of a lot of messy data. He turned it into something our team actually enjoys using every day.",
     authorName: "Sample Client 2",
-    authorRole: "Co-Founder",
-    image: "/assets/images/section/tes-2.svg",
+    authorRole: "Operations Lead, SaaS Dashboard",
+    image: "/assets/images/section/tes-2.jpg",
   },
   {
-    text: "Despite a tight launch schedule, he delivered a clean, well-documented handoff. It's modern, easy to manage, and fits our needs perfectly.",
+    text: "Despite a tight launch schedule, he delivered a polished, well-documented mobile app design. Every screen felt intentional, and our developers had everything they needed to build it.",
     authorName: "Sample Client 3",
-    authorRole: "Marketing Director",
-    image: "/assets/images/section/tes-3.svg",
+    authorRole: "Founder, Mobile App",
+    image: "/assets/images/section/tes-3.jpg",
   },
 ];

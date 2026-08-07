@@ -5,7 +5,7 @@ export function IntroV3() {
     <div id="home" className="section-intro type-3 flat-spacing">
       <div className="intro-author">
         <div className="author-image">
-          <img loading="lazy" width={23} height={31} src="/assets/images/avatar/avatar-boy.png" alt="avatar" />
+          <img loading="lazy" width={48} height={48} src="/assets/images/avatar/avatar-boy.png" alt="avatar" />
         </div>
         <div className="author-info letter-space--05">
           <p className="info_name text-black">Mohamed Matter</p>
