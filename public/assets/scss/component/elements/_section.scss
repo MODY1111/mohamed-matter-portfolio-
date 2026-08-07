@@ -488,8 +488,36 @@
 
             .image {
                 img {
-                    aspect-ratio: calc(468 / 856);
+                    aspect-ratio: calc(468 / 620);
                 }
+            }
+        }
+
+        .user-info {
+            .greeting {
+                font-size: 22px;
+                line-height: 1.2;
+                padding-bottom: 12px;
+            }
+
+            .introduce {
+                font-size: 12px;
+                line-height: 1.4;
+            }
+
+            .avaiable-dot {
+                margin-bottom: 12px;
+            }
+
+            .br-line {
+                margin-top: 12px;
+                margin-bottom: 12px;
+            }
+        }
+
+        .action-group {
+            .action-down .text-body-3 {
+                font-size: 12px;
             }
         }
     }
