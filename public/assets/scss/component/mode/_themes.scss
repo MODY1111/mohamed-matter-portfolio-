@@ -863,8 +863,16 @@
     }
 
     @include res(md) {
-        top: 50%;
-        transform: translateY(-50%);
+        // Anchoring this to the vertical center on mobile means it sits
+        // fixed over whatever section is scrolled to the middle of the
+        // screen, permanently overlapping content (e.g. the Work cards).
+        // Move it to a corner, out of the scrolling content's way, like
+        // the other floating tools in .sidebar-tools.
+        top: unset;
+        bottom: 16px;
+        left: 16px;
+        right: unset;
+        transform: unset;
     }
 }
 

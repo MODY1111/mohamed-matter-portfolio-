@@ -334,6 +334,8 @@
 
 .animationtext {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 4px;
     gap: 6px;
 }
 

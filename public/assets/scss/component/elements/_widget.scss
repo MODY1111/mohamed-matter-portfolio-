@@ -346,6 +346,38 @@
                 padding: 20px 15px;
             }
         }
+
+        // "View Case Study" plus the "01 / 07" counter no longer fit on
+        // one row at mobile widths; the counter was being squeezed down
+        // to the point its "/" wrapped onto its own line, overlapping
+        // the card edge. Shrink the button and keep the counter on one
+        // line instead of letting it wrap.
+        .group-action {
+            gap: 8px;
+            flex-wrap: nowrap;
+
+            .tf-btn-action {
+                min-width: 0;
+                flex-shrink: 1;
+
+                .text {
+                    // The text was wrapping to 2 lines inside the fixed
+                    // 40px-tall pill (it only had room to shrink, not
+                    // grow, once the counter also needed space) — keep it
+                    // on one line and let the smaller font do the fitting
+                    // instead of the pill height.
+                    white-space: nowrap;
+                    font-size: 12px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                }
+            }
+
+            > p {
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+        }
     }
 
     @include res(lg, between, xxl) {
@@ -433,6 +465,21 @@
 
     @include res(sm) {
         flex-wrap: wrap;
+
+        // Nowrap keeps the name/duty pair from breaking, but a flex item's
+        // min-width defaults to its content width, so this nowrap text
+        // was pushing the whole row wider than the screen and getting
+        // clipped mid-word instead of wrapping to its own line.
+        .tech_info {
+            text-wrap: wrap;
+            min-width: 0;
+        }
+
+        .tech_image {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
     }
 }
 

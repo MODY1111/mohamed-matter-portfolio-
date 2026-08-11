@@ -7,7 +7,7 @@ export default function Home() {
       defaultMode="dark"
       bodyClass="counter-scroll video-v1"
       showVideoBg={true}
-      videoSrc="assets/images/overlay-2.mp4"
+      videoSrc="/assets/images/overlay-2.mp4"
     />
   );
 }

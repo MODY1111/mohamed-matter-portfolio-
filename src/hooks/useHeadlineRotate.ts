@@ -69,14 +69,13 @@ export function useHeadlineRotate() {
       }
     };
 
-    headlines.forEach((headline) => {
+    const measureWrapperWidth = (headline: Element) => {
+      const currentWord = headline.querySelector<HTMLElement>(".item-text.is-visible");
+      const wrapper = headline.querySelector<HTMLElement>(".cd-words-wrapper");
+      if (!wrapper) return;
       if (headline.classList.contains("clip")) {
-        const wrapper = headline.querySelector<HTMLElement>(".cd-words-wrapper");
-        if (wrapper) {
-          const newWidth = wrapper.getBoundingClientRect().width + 10;
-          wrappers.push({ el: wrapper, initialWidth: wrapper.style.width });
-          wrapper.style.width = newWidth + "px";
-        }
+        const target = currentWord ?? wrapper;
+        wrapper.style.width = target.getBoundingClientRect().width + 10 + "px";
       } else {
         const words = headline.querySelectorAll<HTMLElement>(".cd-words-wrapper .item-text");
         let width = 0;
@@ -84,18 +83,42 @@ export function useHeadlineRotate() {
           const rect = w.getBoundingClientRect();
           if (rect.width > width) width = rect.width;
         });
-        const wrap = headline.querySelector<HTMLElement>(".cd-words-wrapper");
-        if (wrap) {
-          wrappers.push({ el: wrap, initialWidth: wrap.style.width });
-          wrap.style.width = width + "px";
-        }
+        wrapper.style.width = width + "px";
       }
+    };
+
+    const measureAll = () => {
+      headlines.forEach((headline) => measureWrapperWidth(headline));
+    };
+
+    headlines.forEach((headline) => {
+      const wrapper = headline.querySelector<HTMLElement>(".cd-words-wrapper");
+      if (wrapper) wrappers.push({ el: wrapper, initialWidth: wrapper.style.width });
+    });
+
+    // Measuring before webfonts finish loading can lock the wrapper to the
+    // fallback-font width; once the real font swaps in, the rotating word
+    // no longer fits and wraps underneath the "Hey, I'm" text instead of
+    // clipping cleanly. Re-measure once fonts (and layout) have settled.
+    measureAll();
+    document.fonts?.ready.then(measureAll).catch(() => {});
+
+    let resizeTimer: ReturnType<typeof setTimeout>;
+    const onResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(measureAll, 150);
+    };
+    window.addEventListener("resize", onResize);
+
+    headlines.forEach((headline) => {
       const first = headline.querySelector(".is-visible");
       if (first) timers.push(setTimeout(() => hideWord(first), animationDelay));
     });
 
     return () => {
       timers.forEach(clearTimeout);
+      clearTimeout(resizeTimer);
+      window.removeEventListener("resize", onResize);
       wrappers.forEach(({ el, initialWidth }) => {
         el.style.width = initialWidth;
       });

@@ -5,8 +5,8 @@ import Image from "next/image";
 export function Work() {
     return (
         <div id="work" className="section-work flat-spacing">
-            <div className="sect-tag text-caption fw-medium" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
-                <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <div className="sect-tag-row">
+                <span className="sect-tag text-caption fw-medium">
                     <i className="icon icon-high-light" />
                     Work Highlights
                 </span>

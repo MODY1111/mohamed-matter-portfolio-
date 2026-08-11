@@ -21,7 +21,8 @@ export function Intro() {
             </div>
 
             <h1 className="intro-title letter-space--2 ">
-                I’m designing <span className="is-bg">products</span> <br />
+                I’m designing <span className="is-bg">products</span>{" "}
+                <br className="d-none d-sm-block" />
                 <span className="type-2 is-bg">& interfaces</span> that people
                 trust
             </h1>

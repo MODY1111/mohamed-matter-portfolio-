@@ -650,9 +650,22 @@ export function useIsakAnimations() {
             ),
         );
 
-        /* ---------------- Refresh ScrollTrigger after layout settles ---------------- */
+        /* ---------------- Refresh ScrollTrigger after layout settles ----------------
+         * On slower mobile connections images/video finish loading well after
+         * this effect runs, shifting section offsets so triggers computed at
+         * 100ms fire at the wrong scroll position. Refresh again once the
+         * page is fully loaded to correct for that. */
         const refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 100);
-        cleanups.push(() => clearTimeout(refreshTimer));
+        const onWindowLoad = () => ScrollTrigger.refresh();
+        if (document.readyState === "complete") {
+            onWindowLoad();
+        } else {
+            window.addEventListener("load", onWindowLoad);
+        }
+        cleanups.push(() => {
+            clearTimeout(refreshTimer);
+            window.removeEventListener("load", onWindowLoad);
+        });
 
         return () => {
             cleanups.forEach((fn) => fn());
