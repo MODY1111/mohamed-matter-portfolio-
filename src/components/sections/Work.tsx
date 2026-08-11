@@ -22,7 +22,7 @@ export function Work() {
             <div className="work-list element-sticky">
                 {works.map((w, i) => (
                     <div className="sticky-item" key={w.title}>
-                        <div className="wg-work">
+                        <div className="wg-work effectFade fadeUp mobile-reveal no-div">
                             <div className="work-image">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <Image

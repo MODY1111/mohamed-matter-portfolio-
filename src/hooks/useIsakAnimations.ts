@@ -198,7 +198,21 @@ export function useIsakAnimations() {
             });
 
         /* ---------------- effectFade fadeUp/fadeDown/fadeLeft/fadeRight/fadeZoom/fadeRotateX ---------------- */
+        const isDesktopWidth = window.matchMedia("(min-width: 992px)").matches;
         document.querySelectorAll<HTMLElement>(".effectFade").forEach((el) => {
+            // Work cards already get a dedicated pinned/sticky reveal on
+            // desktop (see .wg-work .wrap in _widget.scss, res(lg,min)) —
+            // this generic fade is only meant to give mobile (where that
+            // sticky effect is disabled entirely) some reveal animation
+            // instead of the cards just appearing statically. .effectFade
+            // carries a static `opacity: 0` in CSS, so skipping the GSAP
+            // setup on desktop still needs to explicitly clear that or
+            // the cards stay invisible forever.
+            if (el.classList.contains("mobile-reveal") && isDesktopWidth) {
+                gsap.set(el, { autoAlpha: 1 });
+                return;
+            }
+
             const fromVars: gsap.TweenVars = { autoAlpha: 0 };
             const toVars: gsap.TweenVars = {
                 autoAlpha: 1,
