@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ImageSwitch } from "./ImageSwitch";
 import { profile } from "@/data/profile";
 
-const CV_PATH = "/Mohamed_Matter_CV_ATS_v4.pdf";
+const CV_PATH = "/Mohamed_Matter_CV.pdf";
 
 type UserSidebarProps = {
     variant?: "v1" | "v2" | "v3";
