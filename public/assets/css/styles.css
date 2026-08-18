@@ -4550,19 +4550,29 @@ button.animate-btn::after,
   margin-bottom: 32px;
   color: var(--white-72);
 }
-.sidebar-user .action-down {
+.sidebar-user .action-down,
+.dark-mode .sidebar-user .action-down {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--white-72);
+  color: var(--white);
+  font-weight: 500;
 }
-.sidebar-user .action-down:hover {
+.sidebar-user .action-down:hover,
+.dark-mode .sidebar-user .action-down:hover {
   color: var(--primary);
 }
 .sidebar-user .action-group {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
+}
+.sidebar-user .tf-btn-action .text,
+.sidebar-user .tf-btn-action .icon,
+.dark-mode .sidebar-user .tf-btn-action .text,
+.dark-mode .sidebar-user .tf-btn-action .icon {
+  color: var(--white);
 }
 .sidebar-user .user-image .image img {
   aspect-ratio: 0.546728972;
