@@ -15,7 +15,8 @@ export function Footer() {
       <div className="foot-inner">
         <div className="isak effectFade fadeUp no-div">
           <p className="footer-name-mark">
-            <span className="footer-name-mark_white">Mohamed</span> Matter
+            <span className="footer-name-mark_white">Mohamed</span>
+            <span className="footer-name-mark_outline">Matter</span>
           </p>
         </div>
         <a href="#" className="f-logo effectFade fadeZoom">
