@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 import BootstrapClient from "@/hooks/BootstrapClient";
 import SmoothScroll from "@/hooks/SmoothScroll";
 import "./globals.scss";
@@ -31,9 +32,11 @@ export default function RootLayout({
         <html lang="en-US" suppressHydrationWarning>
             <body>
                 <BootstrapClient />
-                <SmoothScroll>
-                    <ThemeProvider>{children}</ThemeProvider>
-                </SmoothScroll>
+                <LanguageProvider>
+                    <SmoothScroll>
+                        <ThemeProvider>{children}</ThemeProvider>
+                    </SmoothScroll>
+                </LanguageProvider>
             </body>
         </html>
     );

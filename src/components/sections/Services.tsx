@@ -2,13 +2,17 @@
 
 import { services } from "@/data/services";
 import Image from "next/image";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { translations } from "@/i18n/translations";
 
 export function Services() {
+    const { lang } = useLanguage();
+    const t = translations[lang];
     return (
         <div id="service" className="section-service flat-spacing">
             <div className="sect-tag text-caption fw-medium effectFade fadeUp no-div mb-0">
                 <i className="icon icon-service" />
-                Services
+                {t.services.tag}
             </div>
 
             <div id="accordion-service">
@@ -29,7 +33,7 @@ export function Services() {
                                 aria-controls={s.id}
                             >
                                 <h4 className="text letter-space--2 text-black-72">
-                                    {s.title}
+                                    {s.title[lang]}
                                 </h4>
 
                                 <div className="ic-wrap">
@@ -54,7 +58,7 @@ export function Services() {
                                                         width={340}
                                                         height={206}
                                                         src={img}
-                                                        alt={s.title}
+                                                        alt={s.title[lang]}
                                                         unoptimized={img.endsWith(".svg")}
                                                     />
                                                 </div>
@@ -75,7 +79,7 @@ export function Services() {
                                     </div>
 
                                     <p className="service-desc text-black-56">
-                                        {s.description}
+                                        {s.description[lang]}
                                     </p>
                                 </div>
                             </div>

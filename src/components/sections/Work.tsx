@@ -1,14 +1,20 @@
+"use client";
+
 import { works } from "@/data/works";
 import { profile } from "@/data/profile";
 import Image from "next/image";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { translations } from "@/i18n/translations";
 
 export function Work() {
+    const { lang } = useLanguage();
+    const t = translations[lang];
     return (
         <div id="work" className="section-work flat-spacing">
             <div className="sect-tag-row">
                 <span className="sect-tag text-caption fw-medium">
                     <i className="icon icon-high-light" />
-                    Work Highlights
+                    {t.work.tag}
                 </span>
                 <a
                     href={profile.behance}
@@ -16,7 +22,7 @@ export function Work() {
                     rel="noopener noreferrer"
                     className="text-body-3 link text-black-72"
                 >
-                    See all projects on Behance →
+                    {t.work.seeAll}
                 </a>
             </div>
             <div className="work-list element-sticky">
@@ -59,12 +65,12 @@ export function Work() {
                                                 {w.title}
                                             </h4>
                                             <p className="w-desc text-white-56 text-body-3">
-                                                {w.description}
+                                                {w.description[lang]}
                                             </p>
                                             <div className="w-highlight">
                                                 <div className="box-high">
                                                     <p className="text-body-3 text-white-56">
-                                                        Year
+                                                        {t.work.year}
                                                     </p>
                                                     <p className="text-body-1 text-white-72">
                                                         {w.year}
@@ -72,10 +78,10 @@ export function Work() {
                                                 </div>
                                                 <div className="box-high">
                                                     <p className="text-body-3 text-white-56">
-                                                        Role
+                                                        {t.work.role}
                                                     </p>
                                                     <p className="text-body-1 text-white-72">
-                                                        {w.role}
+                                                        {w.role[lang]}
                                                     </p>
                                                 </div>
                                             </div>
@@ -105,7 +111,7 @@ export function Work() {
                                                         <i className="icon icon-arrow-right-top" />
                                                     </span>
                                                     <span className="text text-body-3 letter-space--05 fw-medium">
-                                                        View Case Study
+                                                        {t.work.viewCase}
                                                     </span>
                                                     <span className="ic-wrap">
                                                         <i className="icon icon-arrow-right-top" />

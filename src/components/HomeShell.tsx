@@ -8,6 +8,7 @@ import { DesktopSidebar } from "./DesktopSidebar";
 import { HeaderClock } from "./HeaderClock";
 import { UserSidebar } from "./UserSidebar";
 import { Preloader } from "./Preloader";
+import { LanguageSwitch } from "./LanguageSwitch";
 import { Intro } from "./sections/Intro";
 import { IntroV2 } from "./sections/IntroV2";
 import { IntroV3 } from "./sections/IntroV3";
@@ -92,6 +93,8 @@ export function HomeShell({
     return (
         <>
             <Preloader bgDark={preloadIsDark} />
+
+            <LanguageSwitch />
 
             <BodyBackground
                 showCloudItem={showCloudBg}

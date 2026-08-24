@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { navItems } from "@/data/nav";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const { lang } = useLanguage();
 
   const toggle = () => {
     const next = !open;
@@ -27,7 +29,7 @@ export function MobileMenu() {
                 <li className="nav-item">
                   <a href={item.href} className="item-link scroll-link" onClick={() => setOpen(false)}>
                     <i className={`icon ${item.icon}`} />
-                    <p className="tool-tip text-caption">{item.label}</p>
+                    <p className="tool-tip text-caption">{item.label[lang]}</p>
                   </a>
                 </li>
                 {item.separator === "after" && <li className="br-line" />}

@@ -7079,6 +7079,91 @@ button.animate-btn::after,
   background: var(--white);
 }
 
+.tf-lang-switch {
+  position: fixed;
+  top: 20px;
+  right: 16px;
+  z-index: 98;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background-color: var(--white);
+  border-radius: 999px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.0588235294), 0px 0.5px 0.5px 0px rgba(0, 0, 0, 0.031372549), 0px 1px 1px -0.5px rgba(0, 0, 0, 0.031372549), 0px 3px 3px -1.5px rgba(0, 0, 0, 0.031372549);
+  direction: ltr;
+}
+.tf-lang-switch button {
+  border: none;
+  background: none;
+  padding: 2px 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--black-40);
+  cursor: pointer;
+  line-height: 1;
+}
+.tf-lang-switch button.active {
+  color: var(--primary);
+}
+.tf-lang-switch_divider {
+  width: 1px;
+  height: 10px;
+  background-color: var(--black-15);
+}
+@media (min-width: 1600px) {
+  .tf-lang-switch {
+    right: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .tf-lang-switch {
+    top: 16px;
+    right: 12px;
+  }
+}
+.dark-mode .tf-lang-switch {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+  backdrop-filter: blur(12px);
+}
+.dark-mode .tf-lang-switch button {
+  color: var(--white-40);
+}
+.dark-mode .tf-lang-switch button.active {
+  color: var(--white);
+}
+
+/* RTL: layout chrome (icon rows, nav, sidebars) always keeps LTR visual order —
+   only text content should mirror when Arabic is active. */
+.sidebar-tools,
+.sidebar-tools .nav-list,
+.sidebar-tools .item-link,
+.nav-mobile-item,
+.action-open-mobile .item-link,
+.action-group,
+.user-social,
+.foot-inner,
+.foot-bottom,
+.w-highlight,
+.w-tag-list,
+.box-counter,
+.tech-infor,
+.org-tag-list,
+.service-tag,
+.sect-tag-row,
+.sect-tag,
+.award-item,
+.tf-btn-action,
+.group-action,
+.intro-author,
+.author-image,
+.meta-left,
+.tf-header-wrap,
+.time-local {
+  direction: ltr;
+}
+
 .tf-left-bar {
   position: fixed;
   top: 120px;

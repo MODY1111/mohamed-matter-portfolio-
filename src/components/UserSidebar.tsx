@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { ImageSwitch } from "./ImageSwitch";
 import { profile } from "@/data/profile";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { translations } from "@/i18n/translations";
 
 const CV_PATH = "/Mohamed_Matter_CV.pdf";
 
@@ -11,6 +15,8 @@ type UserSidebarProps = {
 export function UserSidebar({ variant = "v1" }: UserSidebarProps) {
     const showMetaLeft = variant !== "v2";
     const dotIsInline = variant === "v2";
+    const { lang } = useLanguage();
+    const t = translations[lang];
     return (
         <div className="sidebar-user">
             <div className="wrap">
@@ -46,7 +52,7 @@ export function UserSidebar({ variant = "v1" }: UserSidebarProps) {
                             </div>
                             <p className="avaiable-dot vertical text-body-3 text-black-72 fw-medium">
                                 <span className="text-vertical">
-                                    Available for Work
+                                    {t.sidebar.availableForWork}
                                 </span>
                                 <span className="dot" />
                             </p>
@@ -96,10 +102,10 @@ export function UserSidebar({ variant = "v1" }: UserSidebarProps) {
                         }
                     >
                         <span className="dot" />
-                        <span>Available for Work</span>
+                        <span>{t.sidebar.availableForWork}</span>
                     </p>
                     <h5 className="greeting letter-space--2 text-white animationtext clip">
-                        Hey, I’m{" "}
+                        {t.sidebar.greeting}{" "}
                         <span className="cd-words-wrapper">
                             {profile.rotatingNames.map((name, i) => (
                                 <span
@@ -112,7 +118,7 @@ export function UserSidebar({ variant = "v1" }: UserSidebarProps) {
                         </span>
                     </h5>
                     <p className="introduce text-white-56 letter-space--05 text-body-3">
-                        {profile.introBio}
+                        {profile.introBio[lang]}
                     </p>
                     <div className="br-line" />
                     <div className="action-group">
@@ -121,7 +127,7 @@ export function UserSidebar({ variant = "v1" }: UserSidebarProps) {
                                 <i className="icon icon-arrow-right-top" />
                             </span>
                             <span className="text text-body-3 letter-space--05 fw-medium">
-                                Let’s talk
+                                {t.sidebar.talk}
                             </span>
                             <span className="ic-wrap">
                                 <i className="icon icon-arrow-right-top" />
@@ -129,7 +135,7 @@ export function UserSidebar({ variant = "v1" }: UserSidebarProps) {
                         </a>
                         <a href={CV_PATH} download className="action-down">
                             <i className="icon icon-download" />
-                            <span className="text-body-3">Download CV</span>
+                            <span className="text-body-3">{t.sidebar.downloadCv}</span>
                         </a>
                     </div>
                 </div>

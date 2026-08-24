@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { navItems } from "@/data/nav";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 type DesktopSidebarProps = {
   positionClass?: string;
@@ -10,6 +11,7 @@ type DesktopSidebarProps = {
 
 export function DesktopSidebar({ positionClass = "pst-v1" }: DesktopSidebarProps = {}) {
   const { theme, setTheme } = useTheme();
+  const { lang } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
@@ -35,7 +37,7 @@ export function DesktopSidebar({ positionClass = "pst-v1" }: DesktopSidebarProps
             <li  key={item.href + i} className="nav-item">
               <a href={item.href} className="item-link scroll-link">
                 <i className={`icon ${item.icon}`} />
-                <p className="tool-tip text-caption">{item.label}</p>
+                <p className="tool-tip text-caption">{item.label[lang]}</p>
               </a>
             </li>
         ))}

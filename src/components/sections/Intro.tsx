@@ -1,4 +1,11 @@
+"use client";
+
+import { useLanguage } from "@/i18n/LanguageContext";
+import { translations } from "@/i18n/translations";
+
 export function Intro() {
+    const { lang } = useLanguage();
+    const t = translations[lang];
     return (
         <div id="home" className="section-intro flat-spacing">
             <div className="intro-author effectFade fadeUp no-div">
@@ -15,16 +22,17 @@ export function Intro() {
                 <div className="author-info letter-space--05">
                     <p className="info_name text-black">Mohamed Matter</p>
                     <p className="info_duty text-black-50 text-body-3">
-                        UI/UX Designer
+                        {t.intro.duty}
                     </p>
                 </div>
             </div>
 
             <h1 className="intro-title letter-space--2 ">
-                I’m designing <span className="is-bg">products</span>{" "}
+                {t.intro.headlineStart}
+                <span className="is-bg">{t.intro.headlineProducts}</span>{" "}
                 <br className="d-none d-sm-block" />
-                <span className="type-2 is-bg">& interfaces</span> that people
-                trust
+                <span className="type-2 is-bg">{t.intro.headlineAmp}</span>
+                {t.intro.headlineEnd}
             </h1>
 
             <div className="intro-item">
@@ -95,7 +103,7 @@ export function Intro() {
                         +
                     </p>
                     <p className="text text-black-56 text-body-3">
-                        Year of experience
+                        {t.intro.years}
                     </p>
                 </div>
                 <div className="wg-counter">
@@ -106,7 +114,7 @@ export function Intro() {
                         +
                     </p>
                     <p className="text text-black-56 text-body-3">
-                        Completed Projects
+                        {t.intro.projects}
                     </p>
                 </div>
             </div>

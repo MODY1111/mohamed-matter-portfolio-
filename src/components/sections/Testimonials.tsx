@@ -1,17 +1,22 @@
+"use client";
+
 import { organizations } from "@/data/organizations";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { translations } from "@/i18n/translations";
 
 export function Testimonials() {
+  const { lang } = useLanguage();
+  const t = translations[lang];
   return (
     <div id="testimonial" className="section-testimonial flat-spacing">
       <div className="sect-tag text-caption fw-medium effectFade fadeUp no-div">
         <i className="icon icon-tes" />
-        Trusted By
+        {t.testimonials.tag}
       </div>
       <div className="heading overflow-hidden">
         <div className="head-left">
-          <h4 className="s-title letter-space--2 text-black-72 split-text effect-blur-fade">
-            Organizations <br className="d-none d-lg-block" />
-            I&apos;ve worked with
+          <h4 key={lang} className="s-title letter-space--2 text-black-72 split-text effect-blur-fade" style={{ opacity: 1 }}>
+            {t.testimonials.title}
           </h4>
           <div className="box-counter effectFade fadeUp no-div">
             <div className="wg-counter">
@@ -21,7 +26,7 @@ export function Testimonials() {
                 </span>
                 +
               </p>
-              <p className="text text-black-56">Completed projects</p>
+              <p className="text text-black-56">{t.testimonials.completed}</p>
             </div>
             <div className="wg-counter">
               <p className="counter h1 d-flex font-2 letter-space--2 text-black-72">
@@ -30,7 +35,7 @@ export function Testimonials() {
                 </span>
                 +
               </p>
-              <p className="text text-black-56">Happy clients</p>
+              <p className="text text-black-56">{t.testimonials.happy}</p>
             </div>
           </div>
         </div>
