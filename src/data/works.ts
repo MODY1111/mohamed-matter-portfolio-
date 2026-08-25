@@ -103,20 +103,6 @@ export const works: Work[] = [
     link: "https://www.behance.net/gallery/227788333/Preserving-Memories-QR-based-Emotional-Experience",
   },
   {
-    title: "Therapy & Counseling Platform",
-    description: {
-      en: "Arabic (RTL) web design for a mental health and counseling service — booking sessions, connecting with specialists, and starting the first conversation with ease",
-      de: "Arabisches (RTL) Webdesign für einen Beratungsdienst im Bereich mentale Gesundheit — Terminbuchung, Kontakt zu Fachleuten und ein einfacher Einstieg ins erste Gespräch",
-      ar: "تصميم موقع عربي (من اليمين لليسار) لخدمة استشارات نفسية — حجز الجلسات، التواصل مع المختصين، وبدء أول محادثة بسهولة",
-    },
-    year: "2025",
-    role: uiuxRole,
-    tags: ["Healthcare", "Arabic / RTL", "Web Design"],
-    image: "/assets/images/section/work-8.png",
-    logo: "/assets/images/logo/logo-mvp-dark.svg",
-    link: "https://www.behance.net/mohamedmatter",
-  },
-  {
     title: "Aurelia",
     description: {
       en: "A calming one-page site for a specialist OCD and anxiety therapy practice in Dubai and Doha — built to feel unhurried, with a clear path from first visit to booking a session",
