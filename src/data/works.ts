@@ -116,4 +116,18 @@ export const works: Work[] = [
     logo: "/assets/images/logo/logo-mvp-dark.svg",
     link: "https://www.behance.net/mohamedmatter",
   },
+  {
+    title: "Aurelia",
+    description: {
+      en: "A calming one-page site for a specialist OCD and anxiety therapy practice in Dubai and Doha — built to feel unhurried, with a clear path from first visit to booking a session",
+      de: "Eine beruhigende One-Page-Website für eine spezialisierte Praxis für Zwangsstörungen und Angststörungen in Dubai und Doha — gestaltet für ein entspanntes Gefühl, mit einem klaren Weg von der ersten Begegnung bis zur Terminbuchung",
+      ar: "موقع هادئ من صفحة واحدة لعيادة متخصصة في اضطراب الوسواس القهري والقلق في دبي والدوحة — مصمم لينقل شعورًا بالهدوء، بمسار واضح من أول زيارة وحتى حجز الجلسة",
+    },
+    year: "2025",
+    role: uiuxRole,
+    tags: ["Healthcare", "Landing Page", "Web Design"],
+    image: "/assets/images/section/work-9.png",
+    logo: "/assets/images/logo/logo-mvp-dark.svg",
+    link: "https://01a037c8-e970-73c2-938f-1c2c5ec22a05.arena.site/",
+  },
 ];
