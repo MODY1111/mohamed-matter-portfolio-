@@ -114,6 +114,6 @@ export const works: Work[] = [
     tags: ["Healthcare", "Landing Page", "Web Design"],
     image: "/assets/images/section/work-9.png",
     logo: "/assets/images/logo/logo-mvp-dark.svg",
-    link: "https://aurelia-clinical.vercel.app/",
+    link: "https://ocd-eight.vercel.app/",
   },
 ];
