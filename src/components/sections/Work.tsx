@@ -1,6 +1,7 @@
 "use client";
 
 import { works } from "@/data/works";
+import { awards } from "@/data/awards";
 import { profile } from "@/data/profile";
 import Image from "next/image";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -9,25 +10,12 @@ import { translations } from "@/i18n/translations";
 export function Work() {
     const { lang } = useLanguage();
     const t = translations[lang];
-    return (
-        <div id="work" className="section-work flat-spacing">
-            <div className="sect-tag-row">
-                <span className="sect-tag text-caption fw-medium">
-                    <i className="icon icon-high-light" />
-                    {t.work.tag}
-                </span>
-                <a
-                    href={profile.behance}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-body-3 link text-black-72"
-                >
-                    {t.work.seeAll}
-                </a>
-            </div>
-            <div className="work-list element-sticky">
-                {works.map((w, i) => (
-                    <div className="sticky-item" key={w.title}>
+    const featuredWorks = works.filter((w) => w.featured);
+    const moreWorks = works.filter((w) => !w.featured);
+    const platformHighlight = awards.find((a) => a.highlight);
+
+    const renderCard = (w: (typeof works)[number], i: number) => (
+        <div className="sticky-item" key={w.title}>
                         <div className="wg-work effectFade fadeUp mobile-reveal no-div">
                             <div className="work-image">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -136,7 +124,75 @@ export function Work() {
                             </div>
                         </div>
                     </div>
-                ))}
+    );
+
+    return (
+        <div id="work" className="section-work flat-spacing">
+            <div className="sect-tag-row">
+                <span className="sect-tag text-caption fw-medium">
+                    <i className="icon icon-high-light" />
+                    {t.work.featured}
+                </span>
+                <a
+                    href={profile.behance}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-body-3 link text-black-72"
+                >
+                    {t.work.seeAll}
+                </a>
+            </div>
+            <div className="work-list element-sticky">
+                {featuredWorks.map((w, i) => renderCard(w, i))}
+            </div>
+
+            {platformHighlight && (
+                <div className="platform-highlight">
+                    <div className="sect-tag text-caption fw-medium">
+                        <i className="icon icon-stack" />
+                        {t.work.highlight}
+                    </div>
+                    <ul className="award-list">
+                        <li className="award-item hover-cursor-img">
+                            <div className="left">
+                                <h6 className="award_name letter-space--2 text-black-72">
+                                    {platformHighlight.name}
+                                </h6>
+                                <p className="award_desc text-black-56">
+                                    {platformHighlight.publisher[lang]}
+                                </p>
+                                <p className="award_desc text-black-56">
+                                    {platformHighlight.highlight?.[lang]}
+                                </p>
+                            </div>
+                            <h6 className="award_year text-black-72">
+                                {platformHighlight.year}
+                            </h6>
+                            <div className="award_img hover-image">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    loading="lazy"
+                                    width={158}
+                                    height={224}
+                                    src={platformHighlight.image}
+                                    alt={platformHighlight.name}
+                                />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            )}
+
+            <div className="sect-tag-row">
+                <span className="sect-tag text-caption fw-medium">
+                    <i className="icon icon-high-light" />
+                    {t.work.more}
+                </span>
+            </div>
+            <div className="work-list element-sticky">
+                {moreWorks.map((w, i) =>
+                    renderCard(w, featuredWorks.length + i),
+                )}
             </div>
         </div>
     );

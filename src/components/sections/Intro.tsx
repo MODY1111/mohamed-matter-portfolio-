@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
+import { works } from "@/data/works";
 
 export function Intro() {
     const { lang } = useLanguage();
@@ -108,7 +109,7 @@ export function Intro() {
                 </div>
                 <div className="wg-counter">
                     <p className="counter h1 d-flex font-2 letter-space--2">
-                        <span className="number" data-speed="1000" data-to="40">
+                        <span className="number" data-speed="1000" data-to={works.length}>
                             0
                         </span>
                         +

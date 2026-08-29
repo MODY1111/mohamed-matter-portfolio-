@@ -7,70 +7,72 @@ export const translations = {
             downloadCv: "Download CV",
         },
         intro: {
-            duty: "UI/UX Designer",
-            headlineStart: "I’m designing ",
+            duty: "Product Designer",
+            headlineStart: "I turn complex ",
             headlineProducts: "products",
-            headlineAmp: "& interfaces",
-            headlineEnd: " that people trust",
-            years: "Year of experience",
-            projects: "Completed Projects",
+            headlineAmp: "into clear",
+            headlineEnd: " experiences",
+            years: "Years of experience",
+            projects: "Product Case Studies",
         },
         about: {
             tag: "About",
             title: (
                 <>
-                    Designing products and <br className="d-none d-lg-block" />
-                    interfaces with clarity, research, <br className="d-none d-lg-block" />
-                    and design systems
+                    A designer who thinks <br className="d-none d-lg-block" />
+                    beyond pixels
                 </>
             ),
             desc: (
                 <>
-                    I&apos;m a UI/UX Designer with 4+ years of experience across government, AI, fintech, SaaS,
+                    Product Designer with 4+ years of experience across government, AI, fintech, SaaS,
                     <br className="d-none d-lg-block" /> healthcare, mobility, and e-commerce products. <br />
                     <br />
-                    I own the full design process—sitting in on client discovery, running UX research, <br className="d-none d-lg-block" />
-                    building wireframes and prototypes, and handing clean, well-documented designs to developers.
+                    The only designer on my team, owning each project from client discovery through <br className="d-none d-lg-block" />
+                    developer handoff — UX research, workflows, design systems, and well-documented handoff.
                 </>
             ),
         },
         experience: { tag: "Experience" },
         education: { tag: "Education" },
         work: {
-            tag: "Work Highlights",
+            tag: "Selected Work",
+            featured: "Selected Work",
+            highlight: "Platform Highlight",
+            more: "More Work",
             seeAll: "See all projects on Behance →",
             year: "Year",
             role: "Role",
             viewCase: "View Case Study",
         },
-        services: { tag: "Services" },
+        services: { tag: "What I Bring" },
         tech: {
-            tag: "Tech Stack",
+            tag: "Tools",
             title: (
                 <>
-                    See how my expertise with these{" "}
-                    <br className="d-none d-sm-block" /> tools drives better results
+                    The tools and skills behind{" "}
+                    <br className="d-none d-sm-block" /> every product I design
                 </>
             ),
         },
         testimonials: {
-            tag: "Trusted By",
+            tag: "Trusted to Design Products For",
             title: (
                 <>
                     Organizations <br className="d-none d-lg-block" />
                     I&apos;ve worked with
                 </>
             ),
-            completed: "Completed projects",
-            happy: "Happy clients",
+            completed: "Product case studies",
+            happy: "Across government, fintech, SaaS, and healthcare",
         },
         contact: {
             tag: "Contact",
             title: (
                 <>
-                    If you have a general or project <br className="d-none d-lg-block" />
-                    enquiry, please drop me an email <br className="d-none d-lg-block" />
-                    or fill the form - available now
+                    Have a complex product, workflow, <br className="d-none d-lg-block" />
+                    or idea that needs clarity? <br className="d-none d-lg-block" />
+                    Let&apos;s build something meaningful.
                 </>
             ),
             namePlaceholder: "Your Name *",
@@ -96,70 +98,72 @@ export const translations = {
             downloadCv: "Lebenslauf herunterladen",
         },
         intro: {
-            duty: "UI/UX-Designer",
-            headlineStart: "Ich gestalte ",
+            duty: "Produktdesigner",
+            headlineStart: "Ich verwandle komplexe ",
             headlineProducts: "Produkte",
-            headlineAmp: "& Interfaces",
-            headlineEnd: ", denen Menschen vertrauen",
+            headlineAmp: "in klare",
+            headlineEnd: " Erlebnisse",
             years: "Jahre Erfahrung",
-            projects: "Abgeschlossene Projekte",
+            projects: "Produkt-Case-Studies",
         },
         about: {
             tag: "Über mich",
             title: (
                 <>
-                    Produkte und Interfaces <br className="d-none d-lg-block" />
-                    gestalten – mit Klarheit, Recherche <br className="d-none d-lg-block" />
-                    und Design-Systemen
+                    Ein Designer, der über <br className="d-none d-lg-block" />
+                    Pixel hinausdenkt
                 </>
             ),
             desc: (
                 <>
-                    Ich bin UI/UX-Designer mit über 4 Jahren Erfahrung in den Bereichen Behörden, KI, Fintech, SaaS,
+                    Produktdesigner mit über 4 Jahren Erfahrung in den Bereichen Behörden, KI, Fintech, SaaS,
                     <br className="d-none d-lg-block" /> Gesundheitswesen, Mobilität und E-Commerce. <br />
                     <br />
-                    Ich verantworte den gesamten Designprozess – von der Kundenanalyse über UX-Recherche <br className="d-none d-lg-block" />
-                    und Wireframes bis hin zu sauber dokumentierten Designs für Entwickler.
+                    Als einziger Designer im Team verantworte ich jedes Projekt – von der Kundenanalyse <br className="d-none d-lg-block" />
+                    bis zur Übergabe an Entwickler: UX-Recherche, Workflows, Design-Systeme und saubere Dokumentation.
                 </>
             ),
         },
         experience: { tag: "Erfahrung" },
         education: { tag: "Ausbildung" },
         work: {
-            tag: "Projekt-Highlights",
+            tag: "Ausgewählte Projekte",
+            featured: "Ausgewählte Projekte",
+            highlight: "Plattform-Highlight",
+            more: "Weitere Projekte",
             seeAll: "Alle Projekte auf Behance ansehen →",
             year: "Jahr",
             role: "Rolle",
             viewCase: "Case Study ansehen",
         },
-        services: { tag: "Leistungen" },
+        services: { tag: "Was ich mitbringe" },
         tech: {
-            tag: "Tech-Stack",
+            tag: "Werkzeuge",
             title: (
                 <>
-                    So sorgt meine Erfahrung mit diesen{" "}
-                    <br className="d-none d-sm-block" /> Tools für bessere Ergebnisse
+                    Die Werkzeuge und Fähigkeiten hinter{" "}
+                    <br className="d-none d-sm-block" /> jedem Produkt, das ich gestalte
                 </>
             ),
         },
         testimonials: {
-            tag: "Referenzen",
+            tag: "Vertraut für die Gestaltung von Produkten",
             title: (
                 <>
                     Organisationen, <br className="d-none d-lg-block" />
                     mit denen ich gearbeitet habe
                 </>
             ),
-            completed: "Abgeschlossene Projekte",
-            happy: "Zufriedene Kunden",
+            completed: "Produkt-Case-Studies",
+            happy: "In Behörden, Fintech, SaaS und Gesundheitswesen",
         },
         contact: {
             tag: "Kontakt",
             title: (
                 <>
-                    Bei allgemeinen Fragen oder <br className="d-none d-lg-block" />
-                    Projektanfragen schreiben Sie mir gerne <br className="d-none d-lg-block" />
-                    eine E-Mail oder füllen Sie das Formular aus
+                    Haben Sie ein komplexes Produkt, <br className="d-none d-lg-block" />
+                    einen Workflow oder eine Idee, <br className="d-none d-lg-block" />
+                    die Klarheit braucht? Lassen Sie uns etwas Bedeutsames schaffen.
                 </>
             ),
             namePlaceholder: "Ihr Name *",
@@ -185,70 +189,72 @@ export const translations = {
             downloadCv: "تحميل السيرة الذاتية",
         },
         intro: {
-            duty: "مصمم UI/UX",
-            headlineStart: "أُصمم ",
-            headlineProducts: "منتجات",
-            headlineAmp: "وواجهات",
-            headlineEnd: " يثق بها الناس",
+            duty: "مصمم منتجات",
+            headlineStart: "أُحوّل المنتجات ",
+            headlineProducts: "المعقدة",
+            headlineAmp: "إلى تجارب",
+            headlineEnd: " واضحة",
             years: "سنوات الخبرة",
-            projects: "مشاريع منجزة",
+            projects: "دراسات حالة منتج",
         },
         about: {
             tag: "نبذة عني",
             title: (
                 <>
-                    تصميم منتجات وواجهات <br className="d-none d-lg-block" />
-                    بوضوح، بحث، <br className="d-none d-lg-block" />
-                    وأنظمة تصميم
+                    مصمم يفكر ما وراء <br className="d-none d-lg-block" />
+                    البكسل
                 </>
             ),
             desc: (
                 <>
-                    أنا مصمم UI/UX أمتلك خبرة تفوق 4 سنوات في قطاعات الحكومة، الذكاء الاصطناعي، التقنية المالية، البرمجيات كخدمة،
+                    مصمم منتجات أمتلك خبرة تفوق 4 سنوات في قطاعات الحكومة، الذكاء الاصطناعي، التقنية المالية، البرمجيات كخدمة،
                     <br className="d-none d-lg-block" /> الرعاية الصحية، التنقل، والتجارة الإلكترونية. <br />
                     <br />
-                    أتولى عملية التصميم بالكامل — من حضور جلسات اكتشاف العميل وإجراء أبحاث تجربة المستخدم، <br className="d-none d-lg-block" />
-                    إلى بناء المخططات الأولية والنماذج، وتسليم تصاميم واضحة وموثقة جيدًا للمطورين.
+                    المصمم الوحيد في فريقي، مسؤول عن كل مشروع من اكتشاف العميل وحتى التسليم للمطورين — <br className="d-none d-lg-block" />
+                    أبحاث تجربة المستخدم، مسارات العمل، أنظمة التصميم، وتسليم موثق بعناية.
                 </>
             ),
         },
         experience: { tag: "الخبرة" },
         education: { tag: "التعليم" },
         work: {
-            tag: "أبرز الأعمال",
+            tag: "أعمال مختارة",
+            featured: "أعمال مختارة",
+            highlight: "أبرز منصة",
+            more: "أعمال أخرى",
             seeAll: "عرض جميع المشاريع على Behance ←",
             year: "السنة",
             role: "الدور",
             viewCase: "عرض دراسة الحالة",
         },
-        services: { tag: "الخدمات" },
+        services: { tag: "ما أقدمه" },
         tech: {
-            tag: "الأدوات التقنية",
+            tag: "الأدوات",
             title: (
                 <>
-                    تعرّف كيف تسهم خبرتي بهذه الأدوات{" "}
-                    <br className="d-none d-sm-block" /> في تحقيق نتائج أفضل
+                    الأدوات والمهارات وراء{" "}
+                    <br className="d-none d-sm-block" /> كل منتج أصممه
                 </>
             ),
         },
         testimonials: {
-            tag: "موثوق من قبل",
+            tag: "موثوق لتصميم المنتجات",
             title: (
                 <>
                     مؤسسات <br className="d-none d-lg-block" />
                     عملت معها
                 </>
             ),
-            completed: "مشاريع منجزة",
-            happy: "عملاء سعداء",
+            completed: "دراسات حالة منتج",
+            happy: "في قطاعات الحكومة، التقنية المالية، البرمجيات كخدمة، والرعاية الصحية",
         },
         contact: {
             tag: "تواصل",
             title: (
                 <>
-                    لأي استفسار عام أو متعلق بمشروع، <br className="d-none d-lg-block" />
-                    يسعدني تواصلك عبر البريد الإلكتروني <br className="d-none d-lg-block" />
-                    أو تعبئة النموذج - متاح الآن
+                    هل لديك منتج معقد أو مسار عمل <br className="d-none d-lg-block" />
+                    أو فكرة تحتاج إلى وضوح؟ <br className="d-none d-lg-block" />
+                    لنبني شيئًا ذا معنى.
                 </>
             ),
             namePlaceholder: "اسمك *",

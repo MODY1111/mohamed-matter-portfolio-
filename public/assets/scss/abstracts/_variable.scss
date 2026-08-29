@@ -1,6 +1,7 @@
 $font-main: "Inter";
 $font-2: "Apfel Grotezk";
 $font-3: "EB Garamond", serif;
+$font-serif: "Instrument Serif", serif;
 $fontIcon: "icomoon";
 
 :root {
@@ -24,6 +25,7 @@ $fontIcon: "icomoon";
     /*-- Project Color --*/
     --primary: #0066FF;
     --surface: #F5F5F5;
+    --surface-dark: #111111;
 
     --bg: #EBEBEB;
     --bg-2: #EAEAEA;
