@@ -9,6 +9,7 @@ export type Work = {
   image: string;
   logo: string;
   link: string;
+  featured?: boolean;
 };
 
 const uiuxRole: LocalizedText = {
@@ -31,6 +32,7 @@ export const works: Work[] = [
     image: "/assets/images/section/work-1.png",
     logo: "/assets/images/logo/logo-mvp-dark.svg",
     link: "https://www.behance.net/gallery/247864931/Velora-Smart-Investing-Simplified",
+    featured: true,
   },
   {
     title: "Epic Club Manager",
@@ -45,6 +47,7 @@ export const works: Work[] = [
     image: "/assets/images/section/work-2.png",
     logo: "/assets/images/logo/logo-mvp-dark.svg",
     link: "https://www.behance.net/gallery/253235969/Epic-Club-Manager-Sports-Club-SaaS-Dashboard",
+    featured: true,
   },
   {
     title: "Qoot App",
