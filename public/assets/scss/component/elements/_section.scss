@@ -429,9 +429,9 @@
                 left: 0;
                 right: 0;
                 top: auto;
-                height: 50%;
+                height: 68%;
                 background: linear-gradient(to top,
-                        rgba(0, 0, 0, 0.8) 60%,
+                        rgba(0, 0, 0, 0.88) 45%,
                         transparent 100%);
             }
         }
@@ -963,6 +963,10 @@
 
     .tech-list {
         display: grid;
+
+        &:has(+ .tool-skill-list) {
+            margin-bottom: 24px;
+        }
     }
 
     .tool-skill-list {
@@ -970,6 +974,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 8px;
+        margin-top: 8px;
     }
 
     .tool-skill-item {
