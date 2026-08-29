@@ -963,6 +963,10 @@
 
     .tech-list {
         display: grid;
+
+        &:has(+ .tool-skill-list) {
+            margin-bottom: 24px;
+        }
     }
 
     .tool-skill-list {
@@ -970,6 +974,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 8px;
+        margin-top: 8px;
     }
 
     .tool-skill-item {
