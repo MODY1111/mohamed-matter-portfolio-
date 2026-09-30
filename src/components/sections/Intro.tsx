@@ -15,8 +15,8 @@ export function Intro() {
                         loading="lazy"
                         width={48}
                         height={48}
-                        src="/assets/images/avatar/avatar-boy.png"
-                        alt="avatar"
+                        src="/assets/images/avatar/avatar-face.webp"
+                        alt="Mohamed Matter"
                     />
                 </div>
                 <div className="author-info letter-space--05">

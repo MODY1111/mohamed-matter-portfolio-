@@ -34,8 +34,8 @@ export function UserSidebar({ variant = "v1" }: UserSidebarProps) {
                         <img
                             width={468}
                             height={856}
-                            src="/assets/images/avatar/avatar.png"
-                            alt="Avatar"
+                            src="/assets/images/avatar/avatar.webp"
+                            alt="Mohamed Matter"
           
                         />
                     </div>
@@ -107,9 +107,9 @@ export function UserSidebar({ variant = "v1" }: UserSidebarProps) {
                     <h5 className="greeting letter-space--2 text-white animationtext clip">
                         {t.sidebar.greeting}{" "}
                         <span className="cd-words-wrapper">
-                            {profile.rotatingNames.map((name, i) => (
+                            {profile.rotatingNames[lang].map((name, i) => (
                                 <span
-                                    key={name}
+                                    key={i}
                                     className={`item-text ${i === 0 ? "is-visible" : "is-hidden"}`}
                                 >
                                     {name}

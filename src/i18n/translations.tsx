@@ -12,7 +12,7 @@ export const translations = {
             headlineProducts: "products",
             headlineAmp: "& interfaces",
             headlineEnd: " that people trust",
-            years: "Year of experience",
+            years: "Years of experience",
             projects: "Completed Projects",
         },
         about: {
@@ -83,8 +83,8 @@ export const translations = {
             subject: (name: string) => `Project enquiry from ${name}`,
         },
         footer: {
-            quote: "Design is not just what it looks like and feels like. Design is how it works.",
-            quoteAuthor: "Steve Jobs",
+            quote: "The best interface is the one nobody has to think about. That is the part I obsess over.",
+            quoteAuthor: "Mohamed Matter",
             rights: "All rights reserved",
         },
     },
@@ -172,8 +172,8 @@ export const translations = {
             subject: (name: string) => `Projektanfrage von ${name}`,
         },
         footer: {
-            quote: "Design ist nicht nur, wie es aussieht und sich anfühlt. Design ist, wie es funktioniert.",
-            quoteAuthor: "Steve Jobs",
+            quote: "Das beste Interface ist das, über das niemand nachdenken muss. Genau daran arbeite ich.",
+            quoteAuthor: "Mohamed Matter",
             rights: "Alle Rechte vorbehalten",
         },
     },
@@ -261,8 +261,8 @@ export const translations = {
             subject: (name: string) => `استفسار مشروع من ${name}`,
         },
         footer: {
-            quote: "التصميم ليس فقط في الشكل والإحساس، بل في طريقة عمله.",
-            quoteAuthor: "Steve Jobs",
+            quote: "أفضل واجهة هي التي لا يحتاج أحد للتفكير فيها. وهذا بالضبط ما أهتم به.",
+            quoteAuthor: "Mohamed Matter",
             rights: "جميع الحقوق محفوظة",
         },
     },

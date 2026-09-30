@@ -13,7 +13,7 @@ export function Footer() {
         <h5 className="quote-text font-3 fw-normal text-black-72">
           <span className="text-black-56">“</span>
           {t.footer.quote}
-          <span className="text-black-56">“</span>
+          <span className="text-black-56">”</span>
         </h5>
         <p className="quote-author font-3 text-black-56 h6 text-end">{t.footer.quoteAuthor}</p>
       </div>
@@ -38,7 +38,7 @@ export function Footer() {
       </div>
       <div className="foot-bottom">
         <p className="text-nocopy text-black-56 effectFade fadeUp no-div">
-          {t.footer.rights} <br />© 2025 Mohamed Matter
+          {t.footer.rights} <br />© {new Date().getFullYear()} Mohamed Matter
         </p>
         <div className="isak effectFade fadeUp no-div">
           <svg viewBox="0 0 428 162" fill="none" xmlns="http://www.w3.org/2000/svg">

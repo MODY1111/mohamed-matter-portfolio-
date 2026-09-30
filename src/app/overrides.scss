@@ -1,0 +1,103 @@
+/* Project-level fixes layered on top of the Isak template styles. */
+
+/* ---------- Language switch ---------- */
+/* Dark mode inverts --white-* to black tones, which made the inactive
+   labels invisible — use literal colors instead. */
+.dark-mode .tf-lang-switch {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.dark-mode .tf-lang-switch button {
+  color: rgba(255, 255, 255, 0.5);
+}
+.dark-mode .tf-lang-switch button:hover,
+.dark-mode .tf-lang-switch button.active {
+  color: #fff;
+}
+.dark-mode .tf-lang-switch_divider {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.tf-lang-switch button {
+  transition: color 0.2s ease;
+}
+.tf-lang-switch button:hover {
+  color: var(--black);
+}
+
+/* Below lg the header shows logo + clock and the burger sits top-right.
+   Park the switch beside the burger and reserve room for it in the header
+   so it never overlaps the date/clock. */
+@media (max-width: 991px) {
+  .tf-lang-switch {
+    top: 31px;
+    right: 68px;
+  }
+  .tf-header-wrap .left {
+    padding-right: 184px;
+  }
+  .tf-header-wrap .time-local .date {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .tf-lang-switch {
+    top: 31px;
+    right: 68px;
+  }
+}
+
+/* ---------- Sidebar hero card ---------- */
+/* Scrim under the intro copy so it stays readable over the photo. */
+.sidebar-user .user-image .image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 38%,
+    rgba(0, 0, 0, 0.55) 62%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+}
+.sidebar-user .user-info {
+  z-index: 2;
+}
+.sidebar-user .user-info .introduce {
+  color: rgba(255, 255, 255, 0.78);
+}
+.sidebar-user .user-info .avaiable-dot {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Intro author avatar ---------- */
+.section-intro .intro-author .author-image {
+  background-color: transparent;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+.section-intro .intro-author .author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Circular badge text ---------- */
+/* Each glyph is its own span; center it on the rotation axis so narrow
+   letters (I, 1) don't drift and the ring reads evenly. */
+.text-rotate .text span {
+  width: 1em;
+  margin-left: -0.5em;
+  text-align: center;
+  transform-origin: 50% 83px;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+.wg-curve-text.style-2 .text span {
+  transform-origin: 50% 78px;
+}
+
+/* ---------- Tech stack ---------- */
+/* Percentage skill bars don't say much about a senior designer; keep the
+   tool list, drop the scores. */
+.section-tech-stack .tech-progress {
+  display: none;
+}

@@ -15,7 +15,11 @@ export const profile = {
   phone: "+971 50 729 9123",
   location: "Abu Dhabi, UAE",
   behance: "https://www.behance.net/mohamedmatter",
-  rotatingNames: ["Matter", "Designer", "UI/UX"],
+  rotatingNames: {
+    en: ["Matter", "a Product Designer", "a UX Thinker"],
+    de: ["Matter", "Product Designer", "UX-Denker"],
+    ar: ["Matter", "مصمم منتجات", "مفكر UX"],
+  },
   socials: [
     { icon: "icon-linkin", href: "https://www.linkedin.com/in/mohamedmatterux/", label: "LinkedIn" },
     { icon: "icon-x", href: "https://www.behance.net/mohamedmatter", label: "Behance" },
