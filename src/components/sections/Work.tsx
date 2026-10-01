@@ -153,7 +153,7 @@ export function Work() {
                         {t.work.highlight}
                     </div>
                     <ul className="award-list">
-                        <li className="award-item hover-cursor-img">
+                        <li className="award-item">
                             <div className="left">
                                 <h6 className="award_name letter-space--2 text-black-72">
                                     {platformHighlight.name}
@@ -168,16 +168,6 @@ export function Work() {
                             <h6 className="award_year text-black-72">
                                 {platformHighlight.year}
                             </h6>
-                            <div className="award_img hover-image">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
-                                    loading="lazy"
-                                    width={158}
-                                    height={224}
-                                    src={platformHighlight.image}
-                                    alt={platformHighlight.name}
-                                />
-                            </div>
                         </li>
                     </ul>
                 </div>
