@@ -7,10 +7,13 @@ import SmoothScroll from "@/hooks/SmoothScroll";
 import "./globals.scss";
 
 export const metadata: Metadata = {
-    title: "Mohamed Matter - UI/UX Designer",
+    title: "Mohamed Matter — Product Designer",
     description:
-        "Mohamed Matter is a UI/UX Designer with 4+ years of experience across government, AI, fintech, SaaS, healthcare, mobility, and e-commerce products.",
+        "Mohamed Matter is a Product Designer in Abu Dhabi with 4+ years designing government, AI, fintech, SaaS, and healthcare products.",
     authors: [{ name: "Mohamed Matter" }],
+    // The site ships its own EN/DE/AR; browser auto-translate rewrites DOM
+    // nodes React owns and crashes reconciliation (removeChild NotFoundError).
+    other: { google: "notranslate" },
     icons: {
         icon: "/assets/images/logo/favicon.svg",
         apple: "/assets/images/logo/favicon.svg",
@@ -29,7 +32,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en-US" suppressHydrationWarning>
+        <html lang="en-US" translate="no" suppressHydrationWarning>
             <body>
                 <BootstrapClient />
                 <LanguageProvider>

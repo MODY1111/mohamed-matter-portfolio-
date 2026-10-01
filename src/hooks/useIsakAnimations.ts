@@ -56,7 +56,7 @@ export function useIsakAnimations() {
             document
                 .querySelectorAll<HTMLElement>(".text-rotate .text")
                 .forEach((circularText) => {
-                    const text = "ui/ux designer • abu dhabi • since 2020 • ";
+                    const text = "product designer • abu dhabi • since 2020 • ";
                     const chars = text.split("");
                     const degree = 360 / chars.length;
                     circularText.innerHTML = "";
@@ -528,7 +528,7 @@ export function useIsakAnimations() {
         document
             .querySelectorAll<HTMLElement>(".text-rotate .text")
             .forEach((circularText) => {
-                const text = "ui/ux designer • abu dhabi • since 2020 • ";
+                const text = "product designer • abu dhabi • since 2020 • ";
                 const chars = text.split("");
                 const degree = 360 / chars.length;
                 circularText.innerHTML = "";

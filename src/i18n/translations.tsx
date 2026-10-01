@@ -85,7 +85,7 @@ export const translations = {
             subject: (name: string) => `Project enquiry from ${name}`,
         },
         footer: {
-            quote: "The best interface is the one nobody has to think about. That is the part I obsess over.",
+            quote: "The best interface is the one nobody has to think about.",
             quoteAuthor: "Mohamed Matter",
             rights: "All rights reserved",
         },
@@ -176,7 +176,7 @@ export const translations = {
             subject: (name: string) => `Projektanfrage von ${name}`,
         },
         footer: {
-            quote: "Das beste Interface ist das, über das niemand nachdenken muss. Genau daran arbeite ich.",
+            quote: "Das beste Interface ist das, über das niemand nachdenken muss.",
             quoteAuthor: "Mohamed Matter",
             rights: "Alle Rechte vorbehalten",
         },
@@ -267,7 +267,7 @@ export const translations = {
             subject: (name: string) => `استفسار مشروع من ${name}`,
         },
         footer: {
-            quote: "أفضل واجهة هي التي لا يحتاج أحد للتفكير فيها. وهذا بالضبط ما أهتم به.",
+            quote: "أفضل واجهة هي التي لا يحتاج أحد للتفكير فيها.",
             quoteAuthor: "Mohamed Matter",
             rights: "جميع الحقوق محفوظة",
         },

@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { BodyBackground } from "./BodyBackground";
-import { SettingColorMenu } from "./SettingColorMenu";
 import { MobileMenu } from "./MobileMenu";
 import { DesktopSidebar } from "./DesktopSidebar";
 import { HeaderClock } from "./HeaderClock";
@@ -86,7 +85,6 @@ export function HomeShell({
     const headerOutsideMain = variant === "v2";
     const showMobileMenu = variant !== "v2";
     const sidebarPositionClass = variant === "v2" ? "pst-v2" : "pst-v1";
-    const leftBarPositionClass = variant === "v2" ? "pst-v2" : "";
 
     const preloadIsDark = preloaderDark ?? defaultMode === "dark";
 
@@ -102,7 +100,6 @@ export function HomeShell({
                 videoSrc={videoSrc}
             />
 
-            <SettingColorMenu leftBarClass={leftBarPositionClass} />
 
             {showMobileMenu && <MobileMenu />}
 

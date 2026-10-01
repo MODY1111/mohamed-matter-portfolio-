@@ -13,9 +13,9 @@ export type Work = {
 };
 
 const uiuxRole: LocalizedText = {
-  en: "UI/UX Designer",
-  de: "UI/UX-Designer",
-  ar: "مصمم UI/UX",
+  en: "Product Designer",
+  de: "Produktdesigner",
+  ar: "مصمم منتجات",
 };
 
 export const works: Work[] = [

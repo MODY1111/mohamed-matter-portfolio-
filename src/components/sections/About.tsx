@@ -16,7 +16,7 @@ export function About() {
       <h4 key={lang} className="s-title font-serif letter-space--2 text-black-72 split-text effect-blur-fade" style={{ opacity: 1 }}>
         {t.about.title}
       </h4>
-      <p className="s-desc text-black-56 scrolling-effect effectTop">
+      <p key={`desc-${lang}`} className="s-desc text-black-56 scrolling-effect effectTop">
         {t.about.desc}
       </p>
       <ul className="award-list">
