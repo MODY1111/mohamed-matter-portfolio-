@@ -13,7 +13,7 @@ export function About() {
         <i className="icon icon-user-circle" />
         {t.about.tag}
       </div>
-      <h4 key={lang} className="s-title letter-space--2 text-black-72 split-text effect-blur-fade" style={{ opacity: 1 }}>
+      <h4 key={lang} className="s-title font-serif letter-space--2 text-black-72 split-text effect-blur-fade" style={{ opacity: 1 }}>
         {t.about.title}
       </h4>
       <p className="s-desc text-black-56 scrolling-effect effectTop">

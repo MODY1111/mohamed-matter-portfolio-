@@ -1,6 +1,7 @@
 "use client";
 
 import { organizations } from "@/data/organizations";
+import { works } from "@/data/works";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 
@@ -21,7 +22,7 @@ export function Testimonials() {
           <div className="box-counter effectFade fadeUp no-div">
             <div className="wg-counter">
               <p className="counter h1 d-flex font-2 letter-space--2 text-black-72">
-                <span className="number" data-speed="1000" data-to="40">
+                <span className="number" data-speed="1000" data-to={works.length}>
                   0
                 </span>
                 +
@@ -29,12 +30,6 @@ export function Testimonials() {
               <p className="text text-black-56">{t.testimonials.completed}</p>
             </div>
             <div className="wg-counter">
-              <p className="counter h1 d-flex font-2 letter-space--2 text-black-72">
-                <span className="number" data-speed="1000" data-to="20">
-                  0
-                </span>
-                +
-              </p>
               <p className="text text-black-56">{t.testimonials.happy}</p>
             </div>
           </div>

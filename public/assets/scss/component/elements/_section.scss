@@ -950,8 +950,33 @@
 }
 
 .section-tech-stack {
+    .tool-category {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .tool-category_label {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
     .tech-list {
         display: grid;
+    }
+
+    .tool-skill-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tool-skill-item {
+        padding: 6px 12px;
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+        border-radius: 999px;
     }
 
     li {

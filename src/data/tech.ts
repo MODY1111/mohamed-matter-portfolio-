@@ -1,10 +1,20 @@
 import type { LocalizedText } from "./works";
 
+export type ToolCategory = "design" | "product" | "collaboration" | "ai";
+
+export const toolCategoryLabels: Record<ToolCategory, LocalizedText> = {
+  design: { en: "Design", de: "Design", ar: "التصميم" },
+  product: { en: "Product", de: "Produkt", ar: "المنتج" },
+  collaboration: { en: "Collaboration", de: "Zusammenarbeit", ar: "التعاون" },
+  ai: { en: "AI", de: "KI", ar: "الذكاء الاصطناعي" },
+};
+
 export type TechItem = {
   name: string;
   duty: LocalizedText;
   image: { light: string; dark?: string; width: number; height: number };
   progress: number;
+  category: ToolCategory;
 };
 
 export const techStack: TechItem[] = [
@@ -17,6 +27,7 @@ export const techStack: TechItem[] = [
     },
     image: { light: "/assets/images/section/tech-1.svg", width: 19, height: 28 },
     progress: 95,
+    category: "design",
   },
   {
     name: "Adobe Photoshop",
@@ -27,6 +38,7 @@ export const techStack: TechItem[] = [
     },
     image: { light: "/assets/images/section/tech-3.svg", width: 29, height: 28 },
     progress: 75,
+    category: "design",
   },
   {
     name: "Visual Studio Code",
@@ -37,6 +49,7 @@ export const techStack: TechItem[] = [
     },
     image: { light: "/assets/images/section/tech-4.svg", width: 28, height: 28 },
     progress: 70,
+    category: "collaboration",
   },
   {
     name: "ChatGPT",
@@ -47,6 +60,7 @@ export const techStack: TechItem[] = [
     },
     image: { light: "/assets/images/section/tech-5.svg", width: 28, height: 28 },
     progress: 85,
+    category: "ai",
   },
   {
     name: "Claude Code",
@@ -57,5 +71,21 @@ export const techStack: TechItem[] = [
     },
     image: { light: "/assets/images/section/tech-6.svg", width: 28, height: 28 },
     progress: 80,
+    category: "ai",
   },
+];
+
+export type ToolSkill = {
+  label: LocalizedText;
+  category: ToolCategory;
+};
+
+export const toolSkills: ToolSkill[] = [
+  { category: "product", label: { en: "User Research", de: "Nutzerforschung", ar: "بحث المستخدمين" } },
+  { category: "product", label: { en: "UX Strategy", de: "UX-Strategie", ar: "استراتيجية تجربة المستخدم" } },
+  { category: "product", label: { en: "Prototyping", de: "Prototyping", ar: "النمذجة الأولية" } },
+  { category: "product", label: { en: "Design Systems", de: "Design-Systeme", ar: "أنظمة التصميم" } },
+  { category: "collaboration", label: { en: "Developer Handoff", de: "Übergabe an Entwickler", ar: "التسليم للمطورين" } },
+  { category: "collaboration", label: { en: "Documentation", de: "Dokumentation", ar: "التوثيق" } },
+  { category: "collaboration", label: { en: "Stakeholder Collaboration", de: "Zusammenarbeit mit Stakeholdern", ar: "التعاون مع أصحاب المصلحة" } },
 ];
