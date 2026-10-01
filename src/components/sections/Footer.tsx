@@ -25,7 +25,7 @@ export function Footer() {
             <span className="footer-name-mark_outline">Matter</span>
           </p>
         </div>
-        <a href="#" className="f-logo effectFade fadeZoom">
+        <a href="#home" className="f-logo effectFade fadeZoom" aria-label="Back to top">
           <div className="logo">
             <ImageSwitch
               light="/assets/images/logo/logo-icon.svg"

@@ -101,3 +101,20 @@
 .section-tech-stack .tech-progress {
   display: none;
 }
+
+/* ---------- Horizontal overflow ---------- */
+/* The spinning badge's rotated box pokes past the viewport edge on small
+   screens (visible as sideways scroll in RTL). Clip without creating a
+   scroll container so sticky elements keep working. */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* ---------- Section titles ---------- */
+/* Titles wrap naturally (no hard <br>s — SplitText treats even hidden ones
+   as forced breaks); balance the lines so none ends on a lone word. */
+.s-title {
+  text-wrap: balance;
+  max-width: 22em;
+}

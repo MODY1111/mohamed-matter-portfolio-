@@ -19,8 +19,7 @@ export const translations = {
             tag: "About",
             title: (
                 <>
-                    A designer who thinks <br className="d-none d-lg-block" />
-                    beyond pixels
+                    A designer who thinks beyond pixels
                 </>
             ),
             desc: (
@@ -50,8 +49,7 @@ export const translations = {
             tag: "Tools",
             title: (
                 <>
-                    The tools and skills behind{" "}
-                    <br className="d-none d-sm-block" /> every product I design
+                    The tools and skills behind{" "} every product I design
                 </>
             ),
         },
@@ -59,8 +57,7 @@ export const translations = {
             tag: "Trusted to Design Products For",
             title: (
                 <>
-                    Organizations <br className="d-none d-lg-block" />
-                    I&apos;ve worked with
+                    Organizations I&apos;ve worked with
                 </>
             ),
             completed: "Product case studies",
@@ -70,9 +67,7 @@ export const translations = {
             tag: "Contact",
             title: (
                 <>
-                    Have a complex product, workflow, <br className="d-none d-lg-block" />
-                    or idea that needs clarity? <br className="d-none d-lg-block" />
-                    Let&apos;s build something meaningful.
+                    Have a complex product, workflow, or idea that needs clarity? Let&apos;s build something meaningful.
                 </>
             ),
             namePlaceholder: "Your Name *",
@@ -110,8 +105,7 @@ export const translations = {
             tag: "Über mich",
             title: (
                 <>
-                    Ein Designer, der über <br className="d-none d-lg-block" />
-                    Pixel hinausdenkt
+                    Ein Designer, der über Pixel hinausdenkt
                 </>
             ),
             desc: (
@@ -141,8 +135,7 @@ export const translations = {
             tag: "Werkzeuge",
             title: (
                 <>
-                    Die Werkzeuge und Fähigkeiten hinter{" "}
-                    <br className="d-none d-sm-block" /> jedem Produkt, das ich gestalte
+                    Die Werkzeuge und Fähigkeiten hinter{" "} jedem Produkt, das ich gestalte
                 </>
             ),
         },
@@ -150,8 +143,7 @@ export const translations = {
             tag: "Vertraut für die Gestaltung von Produkten",
             title: (
                 <>
-                    Organisationen, <br className="d-none d-lg-block" />
-                    mit denen ich gearbeitet habe
+                    Organisationen, mit denen ich gearbeitet habe
                 </>
             ),
             completed: "Produkt-Case-Studies",
@@ -161,9 +153,7 @@ export const translations = {
             tag: "Kontakt",
             title: (
                 <>
-                    Haben Sie ein komplexes Produkt, <br className="d-none d-lg-block" />
-                    einen Workflow oder eine Idee, <br className="d-none d-lg-block" />
-                    die Klarheit braucht? Lassen Sie uns etwas Bedeutsames schaffen.
+                    Haben Sie ein komplexes Produkt, einen Workflow oder eine Idee, die Klarheit braucht? Lassen Sie uns etwas Bedeutsames schaffen.
                 </>
             ),
             namePlaceholder: "Ihr Name *",
@@ -201,8 +191,7 @@ export const translations = {
             tag: "نبذة عني",
             title: (
                 <>
-                    مصمم يفكر ما وراء <br className="d-none d-lg-block" />
-                    البكسل
+                    مصمم يفكر ما وراء البكسل
                 </>
             ),
             desc: (
@@ -232,8 +221,7 @@ export const translations = {
             tag: "الأدوات",
             title: (
                 <>
-                    الأدوات والمهارات وراء{" "}
-                    <br className="d-none d-sm-block" /> كل منتج أصممه
+                    الأدوات والمهارات وراء{" "} كل منتج أصممه
                 </>
             ),
         },
@@ -241,8 +229,7 @@ export const translations = {
             tag: "موثوق لتصميم المنتجات",
             title: (
                 <>
-                    مؤسسات <br className="d-none d-lg-block" />
-                    عملت معها
+                    مؤسسات عملت معها
                 </>
             ),
             completed: "دراسات حالة منتج",
@@ -252,9 +239,7 @@ export const translations = {
             tag: "تواصل",
             title: (
                 <>
-                    هل لديك منتج معقد أو مسار عمل <br className="d-none d-lg-block" />
-                    أو فكرة تحتاج إلى وضوح؟ <br className="d-none d-lg-block" />
-                    لنبني شيئًا ذا معنى.
+                    هل لديك منتج معقد أو مسار عمل أو فكرة تحتاج إلى وضوح؟ لنبني شيئًا ذا معنى.
                 </>
             ),
             namePlaceholder: "اسمك *",
